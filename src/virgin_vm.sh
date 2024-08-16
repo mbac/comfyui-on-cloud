@@ -30,7 +30,7 @@ echo -e "import torch\nprint(torch.cuda.is_available())\nprint(torch.cuda.get_de
 python test_cuda.py
 
 # Add a directory to the path that's required by several packages
-echo -e "\nexport PATH=\"\$PATH:/home/marco/.local/bin\"" >> ~/.bashrc`
+echo "export PATH=\"\$PATH:/home/$(whoami)/.local/bin\"" >> ~/.bashrc
 
 ## run these lines in the vm to make sure port 8188 is open for external access
 #sudo ufw allow 8188/tcp
